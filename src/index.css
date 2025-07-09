@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "flowbite";
+
+/* ✅ Import Flowbite theme variables */
+@import "flowbite/src/themes/default";
+
+/* ✅ (Optional) Only for Tailwind v4 with plugin syntax */
+@plugin "flowbite/plugin";
+
+/* ✅ Optional: if needed to include source styles */
+@source "../node_modules/flowbite";
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide carousel on small screens (below 768px) */
+@media (max-width: 767px) {
+  .header-Carousel {
+    display: none !important;
+  }
+  .showhidden {
+    display: block !important;
+  }
+  .set_height {
+    height: 321px;
+  }
+
+  /* .fitheight {
+    min-height: fit-content;
+  } */
+}
+
+@media (max-width: 767px) {
+  .top_sectionimage {
+    flex-direction: column;
+  }
+
+  .width_section {
+    width: 100%;
+  }
+  .height_sectio {
+    height: 200px;
+  }
+}
+
+@layer utilities {
+  .show-sm-only {
+    display: block;
+  }
+
+  .show-md-up {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .show-sm-only {
+      display: none !important;
+    }
+
+    .show-md-up {
+      display: block !important;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .trending_hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  /* .toggle_hidden{
+      display: none;
+    } */
+
+  .sidewidht_adj {
+    width: 28%;
+  }
+  /* .heightadj {
+    height: 50vh;
+  } */
+  /* .imgcenter {
+    justify-content: flex-start;
+  } */
+}
+
+@media (max-width: 900px) {
+  .gapitem {
+    gap: 8px;
+  }
+  .pad_client {
+    padding: 4px;
+  }
+  
+}
+@media (max-width: 768px) {
+  .hidden_ul {
+    display: none !important;
+  }
+  .adjust_w {
+    width: 100%;
+  }
+  .show_portal {
+    display: block;
+  }
+  .footer_width {
+    width: 100%;
+  }
+  .Cookie_banner {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .capability_hidden {
+    display: none !important;
+  }
+  .capabilities_show{
+    display: block !important;
+    
+  }
+  .client_hide{
+    display: none !important;
+  }
+}

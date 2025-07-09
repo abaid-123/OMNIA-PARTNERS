@@ -1,0 +1,6 @@
+/* Hide the carousel on small screens */
+@media (max-width: 767px) {
+  .header-Carousel {
+    display: none !important;
+  }
+}

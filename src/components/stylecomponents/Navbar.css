@@ -1,0 +1,33 @@
+.navbar-container {
+  width: 100%;
+}
+
+.logoicon {
+  width: 40px;
+  cursor: pointer;
+}
+
+.navheading {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.nameheading {
+  font-size: 14px;
+  letter-spacing: 6px;
+  margin: 0;
+  border-bottom: 1px solid gray;
+  font-weight: bold;
+}
+
+.paratext1 {
+  font-size: 12px;
+  margin: 0;
+}
+
+.paratext2 {
+  font-size: 6px;
+  margin: 0;
+}

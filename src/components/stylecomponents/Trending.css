@@ -1,0 +1,12 @@
+/* Trending.css */
+
+.custom-scroll-down::after {
+  content: '↓';
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  color: #000;
+}
+
+

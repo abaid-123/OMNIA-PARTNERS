@@ -1,0 +1,63 @@
+.heroCotent {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .heroCotent {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroCotent {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroCotent {
+    padding-left: 100px;
+    padding-right: 2rem;
+  }
+}
+
+.herolink svg {
+  background-color: white;
+  color: blue;
+  border-radius: 50%;
+  padding: px;
+}
+
+.cookie-buttons {
+  padding-top: 12px;
+}
+
+.cookie-buttons .accept-btn,
+.cookie-buttons .decline-btn {
+  width: 100%;
+}
+
+.cookiesbanner {
+  padding-top: 10px;
+}
+.cookiesbanner .cookiesimage {
+  margin-top: 10px;
+}
+
+
+@media (min-width: 768px) {
+  .cookie-buttons .accept-btn,
+  .cookie-buttons .decline-btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cookie-buttons .accept-btn,
+  .cookie-buttons .decline-btn {
+    width: 125px;
+  }
+}
