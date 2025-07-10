@@ -414,52 +414,52 @@ const Trending = () => {
 
           {activeSection === "aroundWeb" && (
             <div className="flex flex-1">
-            <div className="overflow-hidden relative">
-              <img
-                onMouseEnter={() => setHovered("web")}
-                onMouseLeave={() => setHovered(null)}
-                src="/images/trendingimages/web1.png"
-                className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125"
-                alt="web1"
-              />
-              <div className="absolute w-full bottom-[1px] left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-md font-medium">
-                <p>From Around The Web</p>
+              <div className="overflow-hidden relative">
+                <img
+                  onMouseEnter={() => setHovered("web")}
+                  onMouseLeave={() => setHovered(null)}
+                  src="/images/trendingimages/web1.png"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125"
+                  alt="web1"
+                />
+                <div className="absolute w-full bottom-[1px] left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-md font-medium">
+                  <p>From Around The Web</p>
 
-                {hovered === "web" ? (
-                  // Your custom icon on hover
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 transform duration-300"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M7 17L17 7M7 7h10v10"
-                    />
-                  </svg>
-                ) : (
-                  // Default right arrow
-                  <svg
-                    className="w-6 h-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
+                  {hovered === "web" ? (
+                    // Your custom icon on hover
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6 transform duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
                       stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 12H5m14 0-4 4m4-4-4-4"
-                    />
-                  </svg>
-                )}
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M7 17L17 7M7 7h10v10"
+                      />
+                    </svg>
+                  ) : (
+                    // Default right arrow
+                    <svg
+                      className="w-6 h-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 12H5m14 0-4 4m4-4-4-4"
+                      />
+                    </svg>
+                  )}
+                </div>
               </div>
-            </div>
             </div>
           )}
         </div>

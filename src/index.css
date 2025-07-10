@@ -99,7 +99,6 @@
   .pad_client {
     padding: 4px;
   }
-  
 }
 @media (max-width: 768px) {
   .hidden_ul {
@@ -123,11 +122,23 @@
   .capability_hidden {
     display: none !important;
   }
-  .capabilities_show{
+  .capabilities_show {
     display: block !important;
-    
   }
-  .client_hide{
+  .client_hide {
     display: none !important;
   }
 }
+/* industries drop down */
+@media (max-width: 768px) {
+  /* .button_block {
+    display: none !important;
+  } */
+  .set_flex {
+    display: inline-block !important;
+  }
+  .text_handle{
+    font-size:smaller !important;
+  }
+}
+

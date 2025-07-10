@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logoicon from "../assets/logoicon.png";
 import "./stylecomponents/Navbar.css";
-import Industry_dropdown from "./Industry_dropdown";
+import Industry_dropdown from "./dropdowns/Industry_dropdown";
+import Capabilities_dropdown from "./dropdowns/Capabilities_dropdown";
+import Feature_insights_dropdown from "./dropdowns/Feature_insights_dropdown";
 
 const Navbar = () => {
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
@@ -71,7 +73,7 @@ const Navbar = () => {
           </div>
         </div>
         <div>
-          <ul className="hidden_ul cursor-pointer md:flex items-center text-sm  font-medium gap-3 gapitem">
+          <ul className="hidden_ul  cursor-pointer md:flex items-center text-sm  font-medium gap-3 gapitem">
             <li className="hover:border-b-2  border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out ">
               <Link
                 to="/"
@@ -81,7 +83,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="relative hover:border-b-2 border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out">
+            <li className=" hover:border-b-2 border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out">
               <div
                 onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
                 className="cursor-pointer text-gray-700 hover:text-blue-600"
@@ -90,67 +92,39 @@ const Navbar = () => {
               </div>
 
               {isIndustriesOpen && (
-                <div className="absolute top-full left-0 z-50">
-                  {/* <Industry_dropdown /> */}
+                <div className="w-full  bg-[#f7f7f7] shadow-lg z-50  absolute left-0 top-[100%]">
+                  <Industry_dropdown />
                 </div>
               )}
             </li>
 
-            <li className="relative hover:border-b-2  border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out ">
-              <button
+            <li className=" hover:border-b-2 border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out">
+              <div
                 onClick={() => setIsCapabilitiesOpen(!isCapabilitiesOpen)}
-                className="text-gray-700 hover:text-blue-600"
+                className="cursor-pointer text-gray-700 hover:text-blue-600"
               >
-                Capabilities ▾
-              </button>
+                Capabilities {isCapabilitiesOpen ? "▴" : "▾"}
+              </div>
+
               {isCapabilitiesOpen && (
-                <ul className="absolute top-8 bg-white border shadow-md rounded-md w-44 z-10">
-                  <li>
-                    <Link
-                      to="/capability1"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Capability 1
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/capability2"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Capability 2
-                    </Link>
-                  </li>
-                </ul>
+                <div className="w-full  bg-[#f7f7f7] shadow-lg z-50  absolute left-0 top-[100%]">
+                  <Capabilities_dropdown />
+                </div>
               )}
             </li>
 
-            <li className="relative hover:border-b-2  border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out ">
-              <button
+            <li className=" hover:border-b-2 border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out">
+              <div
                 onClick={() => setIsInsightsOpen(!isInsightsOpen)}
-                className="text-gray-700 hover:text-blue-600"
+                className="cursor-pointer text-gray-700 hover:text-blue-600"
               >
-                Featured Insights ▾
-              </button>
+                Featured Insights {isInsightsOpen ? "▴" : "▾"}
+              </div>
+
               {isInsightsOpen && (
-                <ul className="absolute top-8 bg-white border shadow-md rounded-md w-44 z-10">
-                  <li>
-                    <Link
-                      to="/insight1"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Insight 1
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/insight2"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Insight 2
-                    </Link>
-                  </li>
-                </ul>
+                <div className="w-full  bg-[#f7f7f7] shadow-lg z-50  absolute left-0 top-[100%]">
+                  <Feature_insights_dropdown />
+                </div>
               )}
             </li>
 
@@ -201,7 +175,7 @@ const Navbar = () => {
 
       {/* Mobile Sidebar */}
       {isMobileMenuOpen && (
-        <div className="fixed top-0 left-0 w-[70%] h-full bg-white z-50 shadow-md p-6 md:hidden transition-all">
+        <div className="fixed top-0 left-0 w-[40%] h-full bg-white z-50 shadow-md p-6 md:hidden transition-all">
           {/* Top bar in sidebar */}
           <div className="flex items-center justify-between mb-8">
             <img className="w-10" src={logoicon} alt="logo" />
@@ -229,24 +203,33 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="relative hover:border-b-2  border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out ">
-              <Link
-                to="/industries"
+            <li className="relative  ">
+              <div
                 onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
-                className="text-gray-700 hover:text-blue-600"
+                className="cursor-pointer text-gray-700 hover:text-blue-600"
               >
                 Industries {isIndustriesOpen ? "▴" : "▾"}
-              </Link>
+              </div>
 
-              {isIndustriesOpen && <Industry_dropdown />}
+              {isIndustriesOpen && (
+                <div className="  bg-[#f7f7f7] left-[60%] shadow-lg z-50  absolute -right-[200%] -top-[250%]">
+                  <Industry_dropdown />
+                </div>
+              )}
             </li>
-            <li>
-              <Link
-                to="/capability1"
-                onClick={() => setIsMobileMenuOpen(false)}
+            <li className="relative  ">
+              <div
+                onClick={() => setIsCapabilitiesOpen(!isCapabilitiesOpen)}
+                className="cursor-pointer text-gray-700 hover:text-blue-600"
               >
-                Capabilities
-              </Link>
+                Capabilities {isCapabilitiesOpen ? "▴" : "▾"}
+              </div>
+
+              {isCapabilitiesOpen && (
+                <div className="  bg-[#f7f7f7] left-[60%] shadow-lg z-50  absolute -right-[200%] -top-[250%]">
+                  <Capabilities_dropdown />
+                </div>
+              )}
             </li>
             <li>
               <Link to="/insight1" onClick={() => setIsMobileMenuOpen(false)}>

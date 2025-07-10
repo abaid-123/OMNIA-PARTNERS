@@ -10,7 +10,7 @@ import Industries from "../components/Industries";
 
 const Home = () => {
   return (
-    <div className="bg-white text-gray-900 overflow-x-hidden">
+    <div className="">
       <Navbar />
       <main>
         <Hero_section />
