@@ -20,7 +20,7 @@ const Talkus = () => {
                 type="text"
                 placeholder="Email Address"
               />
-              <button className="text-white bg-blue-700 cursor-pointer rounded-full px-4 hover:bg-blue-600">
+              <button className="text-white bg-blue-700 cursor-pointer rounded-full px-2 hover:bg-blue-600">
                 Contact Us
               </button>
             </div>

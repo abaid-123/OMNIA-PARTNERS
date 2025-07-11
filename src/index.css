@@ -20,6 +20,11 @@
   scrollbar-width: none; /* Firefox */
 }
 
+html {
+  scroll-padding-top: 100px; /* Adjust based on navbar height */
+}
+
+
 /* Hide carousel on small screens (below 768px) */
 @media (max-width: 767px) {
   .header-Carousel {
@@ -137,8 +142,66 @@
   .set_flex {
     display: inline-block !important;
   }
-  .text_handle{
-    font-size:smaller !important;
+  .text_handle {
+    font-size: smaller !important;
+  }
+}
+/* card industries width */
+.setwidth {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .setwidth {
+    width: 30%;
   }
 }
 
+@media (min-width: 768px) {
+  .setwidth {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .setwidth {
+    width: 24%;
+  }
+}
+/* industrieshero */
+.industries-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 450px;
+}
+
+@media (min-width: 768px) {
+  .industries-hero {
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .industries-hero {
+    min-height: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  .explore_auto_flex {
+    display: block;
+  }
+ 
+  .hr_show {
+    display: none !important;
+  }
+  .heading_w{
+    width: 100%;
+  }
+  .ex_a_img{
+    width: 100%;
+    padding: 10px 30px;
+  }
+}
