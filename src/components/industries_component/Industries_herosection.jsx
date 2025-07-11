@@ -8,20 +8,10 @@ const Industries_herosection = () => {
   const bannerImages = ["/images/industriesimages/all_Indu.png"];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const handleNext = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === bannerImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrev = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? bannerImages.length - 1 : prevIndex - 1
-    );
-  };
+ 
   return (
     <div
-      className="relative  bg-cover bg-center text-white"
+      className="industries-hero"
       style={{ backgroundImage: `url(${bannerImages[currentImageIndex]})` }}
     >
       {/* Hero Content */}
@@ -58,7 +48,7 @@ const Industries_herosection = () => {
           Free Consultation
         </Link>
 
-        <div className="Cookie_banner absolute right-1/12 bottom-1/12 ">
+        <div className="Cookie_banner absolute right-1/12 top-[400px] ">
           <img
             src="/images/cookies_below.png"
             alt="icon"
