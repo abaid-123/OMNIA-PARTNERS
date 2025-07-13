@@ -66,9 +66,9 @@ const Industries = () => {
     }
   };
   return (
-    <div className=" bg-white p-[5%]  ">
+    <div className=" bg-white p-[3%]  ">
       {/* Heading */}
-      <div className="mb-6 pl-8">
+      <div className="mb-2 pl-8">
         <p className="text-sm text-gray-500">All Industries: 03</p>
       </div>
       <div className="flex justify-between border-b border-blue-700 ">
@@ -126,11 +126,11 @@ const Industries = () => {
               alt="Automotive"
               className="w-full h-[300px] md:h-[300px] object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
             />
-            <h1 className="absolute top-4 left-1 px-3 right-0 text-white text-3xl font-bold z-10">
+            <h1 className="absolute top-4 px-3 right-0 text-white text-3xl font-bold z-10">
               01
             </h1>
 
-            <div className="absolute w-full bottom-[0%] left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm text-white text-sm font-medium">
+            <div className="absolute w-full   flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm text-white text-sm font-medium">
               <p>Automotive</p>
               {hovered === "Automotive" ? (
                 // Down Arrow
@@ -172,20 +172,20 @@ const Industries = () => {
           <div className="flex  md:flex-row  md:w-[42%] gap-1 top_sectionimage">
             {/* Top Right */}
             <div
-              className="w-full h-full relative overflow-hidden"
+              className="w-full  relative overflow-hidden"
               onMouseEnter={() => setHovered("Aerospace")}
               onMouseLeave={() => setHovered(null)}
             >
               <img
                 src={industriesData[1].image}
                 alt="Aerospace & Defense"
-                className="w-full h-[300px] md:h-[300px] object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
+                className="w-full h-[300px]  object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
               />
-              <h1 className="absolute top-4 left-1 px-3 right-0 text-white text-3xl font-bold z-10">
+              <h1 className="absolute top-4  px-3 right-0 text-white text-3xl font-bold z-10">
                 02
               </h1>
 
-              <div className="absolute w-full bottom-[0%] left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm text-white text-sm font-medium">
+              <div className="absolute w-full  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-sm font-medium z-10">
                 <p>Aerospace & Defense</p>
                 {hovered === "Aerospace" ? (
                   // Down Arrow
@@ -225,7 +225,7 @@ const Industries = () => {
 
             {/* Bottom Right */}
             <div
-              className="w-full md:w-[50%] relative overflow-hidden"
+              className="w-full  relative overflow-hidden"
               onMouseEnter={() => setHovered("Aircraft")}
               onMouseLeave={() => setHovered(null)}
             >
@@ -234,12 +234,12 @@ const Industries = () => {
                 alt="Aircraft Modification & Certification"
                 className="w-full h-[300px] md:h-[300px] object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
               />
-              <h1 className="absolute top-4 left-1 px-3 right-0 text-white text-3xl font-bold z-10">
+              <h1 className="absolute top-4  px-3 right-0 text-white text-3xl font-bold z-10">
                 03
               </h1>
 
-              <div className="absolute w-full bottom-[0%] left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded text-white text-sm font-medium">
-                <p>Aircraft Modification & Certification</p>
+              <div className="absolute w-full   flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-sm font-medium z-10">
+                <p>Aircraft & Certification</p>
                 {hovered === "Aircraft" ? (
                   // Down Arrow
                   <svg
@@ -279,7 +279,7 @@ const Industries = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex md:flex-row gap-1  min-h-[300px] md:h-[350px] mt-1 top_sectionimage">
+        <div className="flex  gap-1  mt-1 top_sectionimage">
           {/* Bottom Left */}
           <div
             className="w-full md:w-[40%] relative overflow-hidden"
@@ -291,11 +291,11 @@ const Industries = () => {
               alt="Healthcare"
               className="w-full h-[300px] md:h-[350px] object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
             />
-            <h1 className="absolute top-4 left-1 px-3 right-0 text-white text-3xl font-bold z-10">
+            <h1 className="absolute top-4  px-3 right-0 text-white text-3xl font-bold z-10">
               04
             </h1>
 
-            <div className="absolute w-full bottom-0 left-0 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded text-white text-sm font-medium z-10">
+            <div className="absolute w-full bottom-0  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-sm font-medium z-10">
               <p>Healthcare</p>
               {hovered === "Healthcare" ? (
                 // Down Arrow
@@ -344,11 +344,11 @@ const Industries = () => {
               alt="Logistics"
               className="w-full h-[300px] md:h-[350px]  object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
             />
-            <h1 className="absolute top-4 left-1 px-3 right-0 text-white text-3xl font-bold z-10">
+            <h1 className="absolute top-4  px-3 right-0 text-white text-3xl font-bold z-10">
               05
             </h1>
 
-            <div className="absolute w-full bottom-[0%] left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded text-white text-sm font-medium">
+            <div className="absolute w-full bottom-[0%]  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded text-white text-sm font-medium">
               <p>Logistics</p>
               {hovered === "Logistics" ? (
                 // Down Arrow

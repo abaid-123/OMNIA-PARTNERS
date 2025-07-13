@@ -1,20 +1,18 @@
+/* ✅ Must be at the top — all imports */
+/* @import "flowbite";
+@import "flowbite/src/themes/default"; */
+
+/* ✅ Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "flowbite";
 
-/* ✅ Import Flowbite theme variables */
-@import "flowbite/src/themes/default";
-
-/* ✅ (Optional) Only for Tailwind v4 with plugin syntax */
-@plugin "flowbite/plugin";
-
-/* ✅ Optional: if needed to include source styles */
-@source "../node_modules/flowbite";
-
+/* Your custom styles below (no changes needed here) */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+/* ... your remaining CSS unchanged ... */
+
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

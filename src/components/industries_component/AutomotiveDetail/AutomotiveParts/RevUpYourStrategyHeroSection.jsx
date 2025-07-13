@@ -1,23 +1,20 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Industries_herosection = ({
-  title = "Automotive", // default title
-  backgroundImage = "/images/industriesimages/Automotiveimages/automotive_img.jpg", // default image
-}) => {
+const RevUpYourStrategyHeroSection = () => {
   const navigate = useNavigate();
 
+  const bannerImages = [
+    "/images/industriesimages/Automotiveimages/automotive_img.jpg",
+  ];
+  const [currentImageIndex] = React.useState(0);
   return (
     <div
       className="industries-hero"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      style={{ backgroundImage: `url(${bannerImages[currentImageIndex]})` }}
     >
-      <div className="heroCotent z-10 max-w-6xl px-4 mx-auto pt-32 pb-16 text-left">
-        {/* ⏪ Back Button */}
+      <div className="heroCotent  z-10 max-w-6xl px-4 mx-auto pt-32 pb-16 text-left">
+        {/* ⏪ Back Text with Arrow */}
         <div
           onClick={() => navigate(-1)}
           className="text-white text-sm mb-1 cursor-pointer inline-flex items-center"
@@ -25,9 +22,8 @@ const Industries_herosection = ({
           <span className="text-lg mr-1">«</span> Back
         </div>
 
-        {/* Dynamic Heading */}
         <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-          {title}
+          Automotive
         </h1>
 
         <p className="mb-8 text-sm sm:text-base text-gray-200 max-w-xl">
@@ -36,7 +32,6 @@ const Industries_herosection = ({
           Lorem Ipsum has been the industry's standard dummy text ever since the
           1500s.
         </p>
-
         <Link
           to="#"
           className="herolink inline-flex items-center px-1 py-2 cursor-pointer md:px-2 md:py-2 mb-8 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition"
@@ -61,7 +56,7 @@ const Industries_herosection = ({
         <div className="Cookie_banner absolute bottom-12 right-36">
           <img
             src="/images/cookies_below.png"
-            alt="cookie icon"
+            alt="icon"
             className="h-[50px] object-contain"
           />
         </div>
@@ -70,4 +65,4 @@ const Industries_herosection = ({
   );
 };
 
-export default Industries_herosection;
+export default RevUpYourStrategyHeroSection;

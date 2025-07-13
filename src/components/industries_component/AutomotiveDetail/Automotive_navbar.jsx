@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineShare, HiOutlineBookmark, HiBookmark } from "react-icons/hi2";
 
-const Automotive_navbar = () => {
+const Automotive_navbar = ({ name = "Automotive" }) => {
   const [bookmarked, setBookmarked] = useState(false);
 
   const menuItems = [
@@ -15,7 +15,7 @@ const Automotive_navbar = () => {
     const section = document.getElementById(id);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 100, // adjust offset if needed
+        top: section.offsetTop - 100,
         behavior: "smooth",
       });
     }
@@ -24,9 +24,9 @@ const Automotive_navbar = () => {
   return (
     <div className="w-full border-b bg-white">
       <div className="max-w-7xl mx-auto flex items-center px-4 py-3">
-        {/* Left Title */}
+        {/* Left Title (Dynamic Name) */}
         <div className="mr-[60px] font-semibold text-base text-black whitespace-nowrap">
-          Automotive
+          {name}
         </div>
 
         {/* Center Menu */}
@@ -38,8 +38,8 @@ const Automotive_navbar = () => {
                 onClick={() => handleScroll(item.id)}
                 className={`cursor-pointer hover:text-blue-600 ${
                   index === 0
-                    ? "text-blue-600 hover:border-b-2 font-medium"
-                    : "hover:border-b-2"
+                    ? "text-blue-600 hover:border-b-2 font-medium hover:border-blue-600"
+                    : "hover:border-b-2 hover:border-blue-600"
                 }`}
               >
                 {item.label}

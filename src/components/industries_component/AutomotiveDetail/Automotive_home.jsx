@@ -1,19 +1,22 @@
-import React from 'react';
-import Navbar from '../../Navbar';
-import Automotive_herosection from './Automotive_herosection';
-import Automotive_navbar from './Automotive_navbar';
-import Clienttestimonails from '../../Clienttestimonails';
-import Talkus from '../../Talkus';
-import Footer from '../../Footer';
-import Explore_automotive from './Explore_automotive';
-import HelpIndustries from '../HelpIndustries';
+import Navbar from "../../Navbar";
 
-const Automotive_home = () => {
+import Automotive_navbar from "./Automotive_navbar";
+import Clienttestimonails from "../../Clienttestimonails";
+import Talkus from "../../Talkus";
+import Footer from "../../Footer";
+import Explore_automotive from "./Explore_automotive";
+import HelpIndustries from "../HelpIndustries";
+import AutomotiveHelpClient from "./AutomotiveHelpClient";
+import AutoIndustryTeam from "./AutoIndustryTeam";
+import AutomotiveInsights from "./AutomotiveInsights";
+import Automotive_herosection from "./Automotive_herosection";
+
+const Automotive_home = ({ name, backgroundImage, expoimage,types,industry }) => {
   return (
     <div>
       <Navbar />
-      <Automotive_herosection />
-      <Automotive_navbar />
+      <Automotive_herosection title={name} backgroundImage={backgroundImage} />
+      <Automotive_navbar name={name} />
 
       <div id="overview">
         <Explore_automotive />
@@ -23,14 +26,14 @@ const Automotive_home = () => {
         <HelpIndustries />
       </div>
 
-      <div id="case-studies">
-        <Clienttestimonails />
-      </div>
-
+      <div id="case-studies"></div>
+      <AutomotiveHelpClient />
       <div id="our-teams">
-        <Talkus />
+        <AutoIndustryTeam />
       </div>
-
+      <AutomotiveInsights types={types} industry={industry} />
+      <Clienttestimonails />
+      <Talkus />
       <Footer />
     </div>
   );

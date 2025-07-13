@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Industries_herosection = () => {
-  const [showCookieBanner, setShowCookieBanner] = useState(true);
-
-  const bannerImages = ["/images/industriesimages/all_Indu.png"];
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
- 
+const Industries_herosection = ({
+  title = "All Industries", // default title
+  backgroundImage = "/images/industriesimages/all_Indu.png", // default image
+}) => {
   return (
     <div
       className="industries-hero"
-      style={{ backgroundImage: `url(${bannerImages[currentImageIndex]})` }}
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
       {/* Hero Content */}
-      <div className="heroCotent relative z-10 max-w-6xl px-4 mx-auto pt-32 pb-16 text-left">
+      <div className="heroCotent z-10 max-w-6xl px-4 mx-auto pt-32 pb-16 text-left">
         <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-          All Industries
+          {title}
         </h1>
 
         <p className="mb-8 text-sm sm:text-base text-gray-200 max-w-xl">
@@ -48,11 +48,11 @@ const Industries_herosection = () => {
           Free Consultation
         </Link>
 
-        <div className="Cookie_banner absolute right-1/12 top-[400px] ">
+        <div className="Cookie_banner absolute bottom-12 right-36">
           <img
             src="/images/cookies_below.png"
             alt="icon"
-            className=" h-[50px] object-contain"
+            className="h-[50px] object-contain"
           />
         </div>
       </div>

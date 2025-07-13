@@ -69,19 +69,19 @@ const CapabilitiesSection = () => {
 
   return (
     <div className="bg-gradient-to-b from-[#202947]  to-[#05060b] text-white ">
-      <div className="flex flex-col w-[100%] lg:flex-row max-w-7xl mx-auto ">
-        <div className="flex-1 mt-6 lg:mt-0 ">
+      <div className="flex p-[2%] flex-col w-[100%] lg:flex-row max-w-7xl mx-auto ">
+        <div className="flex-1 mt-6  ">
           {/* Header */}
-          <div className="mb-4 px-[5%] pt-[5%]">
+          <div className="mb-4 ">
             <div className="flex pl-6">
-              <h2 className="text-4xl font-semibold mr-3">Our</h2>
+              <h2 className="text-xl md:text-4xl font-semibold mr-3">Our</h2>
               <p className="capability_hidden text-sm text-gray-300 mt-2">
                 Lorem Ipsum is simply dummy text <br /> of the printing and
                 typesetting industry.
               </p>
             </div>
             <hr className="capability_hidden h-1 w-full border-none bg-[radial-gradient(ellipse_at_center,_#6c86d9,_#00162a)] mt-1 mb-1" />
-            <h2 className="text-4xl font-semibold pl-6">Capabilities</h2>
+            <h2 className="text-xl md:text-xl font-semibold pl-6">Capabilities</h2>
           </div>
 
           <div className="capabilities_show hidden   px-[5%]">
@@ -114,7 +114,7 @@ const CapabilitiesSection = () => {
             <img
               src={selected.image}
               alt={selected.title}
-              className="w-full h-[393px] md:min-h-screen sm:h-full xs:h-[250px] object-cover"
+              className="w-full h-[393px]  object-cover"
             />
 
             {/* Overlay text with number and title */}

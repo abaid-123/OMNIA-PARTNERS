@@ -2,20 +2,20 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0c0c0c] text-white pt-10 px-8 lg:px-20">
+    <footer className="bg-[#0c0c0c] text-white pt-10 px-8">
       {/* Newsletter */}
-      <div className="border-b border-blue-700 lg:flex pb-1 md:pb-2  sm:block md:justify-between    md:items-center sm:px-10 px-4 gap-4">
-        <div>
-          <h2 className="lg:text-3xl text-2xl md:mb-0 mb-6 md:w-2/5 font-semiblod">
+      <div className="border-b border-blue-700 lg:flex     md:justify-between md:items-center ">
+        <div className="pb-1">
+          <h2 className="lg:text-3xl text-2xl   font-semiblod">
             Join Our Newsletter To <br /> Keep Up To Date With Us!
           </h2>
         </div>
 
-        <div className="relative flex w-[50%] footer_width  mt-2 md:m-5">
+        <div className="relative flex  footer_width md:mt-1 ">
           <input
             type="email"
             placeholder=" Enter your email"
-            className=" py-2.5 bg-[#1a1a1a] border border-gray-600 rounded px-4 text-sm text-white  sm:w-72 w-full sm:mr-5 mr-1 lg:mb-0 mb-4   focus:outline-none"
+            className="  bg-[#1a1a1a] border border-gray-600 rounded text-sm text-white  sm:w-72 w-1/2  mr-1 lg:mb-0 mb-2    focus:outline-none"
           />
           {/* <div className="absolute bottom-[30px] md:bottom-[30px] left-3 flex items-center pointer-events-none">
             <svg
@@ -31,15 +31,15 @@ const Footer = () => {
               />
             </svg>
           </div> */}
-          <button className=" border-2 cursor-pointer border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white duration-300 text-sm lg:mb-0 mb-4 px-1 md:px-5  md:py-2.5 rounded-full">
+          <button className=" border-2 cursor-pointer border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white duration-300 text-sm lg:mb-0 mb-2 px-1 md:px-2   rounded-full">
             Subscribe
           </button>
         </div>
       </div>
 
-      <div className=" gap-y-8 md:gap-x-8 border-b lg:flex   md:justify-between  md:items-center border-blue-700 py-8">
+      <div className="   border-b lg:flex   justify-between  md:items-center border-blue-700 py-4">
         {/* Company Info */}
-        <div className="md:w-1/6">
+        <div className="md:w-1/2 w-full">
           <h3 className="font-bold mb-2">OMNIA PARTNERS LTD</h3>
           <p className="text-sm text-gray-400">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -48,9 +48,9 @@ const Footer = () => {
         </div>
 
         {/* Platform */}
-        <div className="md:w-1/6  lg:flex lg:items-center justify-center ">
+        <div className="md:w-1/2 w-full block lg:flex lg:items-center justify-center ">
           {/* Platform */}
-          <div className="md:w-1/6 w-full px-6">
+          <div className="md:w-1/6 w-full ">
             <h4 className="text-gray-300 font-semibold mb-2">Platform</h4>
             <ul className="text-sm text-gray-400 space-y-1 ">
               <li>Industries</li>
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Support */}
-          <div className="md:w-1/6 w-full px-6">
+          <div className="md:w-1/6 w-full">
             <h4 className="text-gray-300 font-semibold mb-2">Support</h4>
             <ul className="text-sm text-gray-400 space-y-1">
               <li>Contact Us</li>
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
 
           {/* Others */}
-          <div className="md:w-1/6 w-full px-6">
+          <div className="md:w-1/4  w-full ">
             <h4 className="text-gray-300 font-semibold mb-2">Others</h4>
             <ul className="text-sm text-gray-400 space-y-1">
               <li>Local language</li>
