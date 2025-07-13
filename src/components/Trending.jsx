@@ -24,7 +24,7 @@ const Trending = () => {
     <section className="  w-full bg-gray-50 p-[5%] ">
       <div className="max-w-screen-xl mx-auto">
         {/* Heading Section */}
-        <div className="trending-heading flex md:flex-row justify-between  items-start md:items-center mb-8">
+        <div className="trending-heading flex items-center justify-between  items-start  mb-8">
           <div className="pl-5">
             <p className="text-base text-gray-500">Featured Insights: 02</p>
             <h2 className="text-2xl font-semibold mt-1 md:text-4xl">
@@ -209,7 +209,7 @@ const Trending = () => {
             <div className="right-content top_sectionimage gap-1   flex flex-1">
               {/* Left side: Large vertical image */}
               <div
-                className="relative flex-1 md:h-full overflow-hidden"
+                className="relative flex-1 h-full overflow-hidden"
                 onMouseEnter={() => setHovered("blogs")}
                 onMouseLeave={() => setHovered(null)}
               >
@@ -219,7 +219,7 @@ const Trending = () => {
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125"
                 />
 
-                <div className="absolute bottom-0 w-full left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded text-white text-md font-medium">
+                <div className="absolute bottom-0 w-full  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded text-white text-md font-medium">
                   <p>Our Latest Blogs</p>
                   {hovered === "blogs" ? (
                     // Down Arrow
@@ -270,7 +270,7 @@ const Trending = () => {
                     alt="Case Studies"
                     className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125"
                   />
-                  <div className="absolute w-full bottom-0 left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded cursor-pointer text-white text-md font-medium">
+                  <div className="absolute w-full bottom-0   flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded cursor-pointer text-white text-md font-medium">
                     <p>Case Studies</p>
                     {hovered === "case" ? (
                       // Your custom icon on hover
@@ -319,7 +319,7 @@ const Trending = () => {
                     alt="White Paper"
                     className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125"
                   />
-                  <div className="absolute w-full bottom-0 left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded text-white text-md font-medium">
+                  <div className="absolute w-full bottom-0 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm rounded text-white text-md font-medium">
                     <p>White Paper</p>
 
                     {hovered === "white" ? (
@@ -371,7 +371,7 @@ const Trending = () => {
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125"
                   alt="Sights"
                 />
-                <div className="absolute w-full bottom-0 left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-md font-medium">
+                <div className="absolute w-full bottom-0  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-md font-medium">
                   <p>Other Firms</p>
 
                   {hovered === "sights" ? (
@@ -422,7 +422,7 @@ const Trending = () => {
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125"
                   alt="web1"
                 />
-                <div className="absolute w-full bottom-[1px] left-4 right-4 flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-md font-medium">
+                <div className="absolute w-full bottom-[1px]  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-md font-medium">
                   <p>From Around The Web</p>
 
                   {hovered === "web" ? (
