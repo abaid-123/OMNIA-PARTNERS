@@ -1,7 +1,13 @@
 import React from "react";
 import "../stylecomponents/Capabilities_dropdown.css";
+import { useNavigate } from "react-router-dom";
 
 const Capabilities_dropdown = () => {
+   const navigate = useNavigate();
+  
+    const handleClick = () => {
+      navigate("/all_capabilities");
+    };
   return (
     <div className="p-6 ">
       <div className="flex w-full justify-between text-center px-8 mb-2">
@@ -10,8 +16,8 @@ const Capabilities_dropdown = () => {
         </div>
         <div className="block">
           <button
-            to="/"
-            className="inline-flex items-center text-sm text-black border bg-white px-1 py-1 rounded-full hover:bg-blue-700 transition"
+            onClick={handleClick}
+            className="inline-flex items-center text-sm text-black border bg-white px-1 py-1 rounded-full  transition"
           >
             <svg
               className="w-6 h-6 mr-1 bg-black text-white rounded-full"
