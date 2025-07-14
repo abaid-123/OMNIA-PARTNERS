@@ -6,7 +6,7 @@ const Industry_dropdown = () => {
    const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/all_industries"); // or any other route you want
+    navigate("/all_industries");
   };
 
   return (

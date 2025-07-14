@@ -3,7 +3,7 @@ import React from "react";
 const Discoverbussiness = () => {
   return (
     <div className="bg-gradient-to-br from-[#0b2634] to-[#000000] text-white w-full">
-      <div className="max-w-5xl mx-auto text-center  p-4 sm:px-6 md:px-12 py-14 sm:py-16 lg:py-20">
+      <div className=" mx-auto text-center  p-4 sm:px-6 md:px-12 py-12 sm:py-12 lg:py-">
         {/* Heading */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl   font-bold leading-tight mb-4">
           Discover Our Newest Insights To Propel{" "}

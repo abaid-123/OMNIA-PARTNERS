@@ -1,112 +1,141 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const industries = [
+const capabilities = [
   {
-    title: "Automotive",
-    points: ["Rev Up Your Strategy", "Shift Into High Gear"],
-    image: "/images/blackimg.png",
-    image2: "/images/circleimg.png",
-  },
-  {
-    title: "Aerospace & Defense",
-    points: ["Elevate Operations", "Strategize With Precision"],
-    image: "/images/blackimg.png",
-    image2: "/images/circleimg.png",
-  },
-  {
-    title: "Aircraft Modification & Certification",
+    title: "Strategic Services",
     points: [
-      "Certify Your Innovations",
-      "Elevate Your Fleet",
-      "Soar With Confidence",
+      "Strategy Development",
+      "Mergers, Acquisitions & Valuation",
+      "Risk Management",
+      "Change & Transformation Management",
     ],
     image: "/images/blackimg.png",
     image2: "/images/circleimg.png",
   },
   {
-    title: "Healthcare",
-    points: ["Healthcare Innovation Awaits", "Diagnose with Intelligence"],
-    image: "/images/blackimg.png",
-    image2: "/images/circleimg.png",
-  },
-  {
-    title: "Automation & Robotics",
-    points: ["Automate Your Success", "Innovate with Robotics"],
-    image: "/images/blackimg.png",
-    image2: "/images/circleimg.png",
-  },
-  {
-    title: "Public Sector",
-    points: ["Enhance Civic Engagement", "Govern with Vision"],
-    image: "/images/blackimg.png",
-    image2: "/images/circleimg.png",
-  },
-  {
-    title: "Telecommunications",
-    points: ["Network with Excellence", "Signal Your Success"],
-    image: "/images/blackimg.png",
-    image2: "/images/circleimg.png",
-  },
-  {
-    title: "Intralogistics",
+    title: "Financial & Legal Services",
     points: [
-      "Streamline Your Supply Chain",
-      "Optimize with Intelligence",
-      "Navigate Logistics Complexity",
+      "Financial Planning & Management",
+      "Intellectual Property & Licensing",
+      "Legal & Regulatory",
+      "Commercial Contracts",
     ],
+    image: "/images/blackimg.png",
+    image2: "/images/circleimg.png",
+  },
+  {
+    title: "Marketing & Customer Relations",
+    points: ["Customer Relationship Management", "Sales, Marketing & Branding"],
+    image: "/images/blackimg.png",
+    image2: "/images/circleimg.png",
+  },
+  {
+    title: "Operational Excellence",
+    points: [
+      "Operational & Services Excellence",
+      "Manufacturing & Quality Assurance",
+      "Supply Chain Optimization",
+    ],
+    image: "/images/blackimg.png",
+    image2: "/images/circleimg.png",
+  },
+  {
+    title: "Human Resources & Organizational Development",
+    points: [
+      "Human Resources",
+      "Performance & Salary Management",
+      "Talent Acquisition & Professional Development",
+      "Coaching Organizational Developments & Training",
+      "Management Services & Staff Augmentation",
+    ],
+    image: "/images/blackimg.png",
+    image2: "/images/circleimg.png",
+  },
+  {
+    title: "Innovation & Technology",
+    points: ["Technology IT", "Product & Services Development"],
+    image: "/images/blackimg.png",
+    image2: "/images/circleimg.png",
+  },
+  {
+    title: "Sustainability & Social Responsibility",
+    points: [],
     image: "/images/blackimg.png",
     image2: "/images/circleimg.png",
   },
 ];
 
-const Explore_industries = () => {
+const ExploreCapabilities = () => {
   const [hovered, setHovered] = useState(null);
   const navigate = useNavigate();
 
   return (
     <div className="p-8">
-      <h2 className="text-2xl md:text-3xl pl-[12px] font-bold mb-6">
-        Explore Our Expertise
-        <hr className="capability_hidden h-1 border-none bg-[radial-gradient(ellipse_at_center,_#03255b,_#e6e8ed)] mt-6 mb-1" />
-      </h2>
+      <p className=" capitalize text-gray-500 pl-[12px] mb-1">
+        All Capabilities
+      </p>
+      <div className="flex items-center justify-between pl-[12px] px-4">
+        <h2 className="text-2xl capitalize md:text-3xl  font-bold mb-6">
+          our innovative services for the modern era
+        </h2>
+        <div className="border p-1 rounded-full cursor-pointer">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <hr className="capability_hidden h-1 border-none bg-[radial-gradient(ellipse_at_center,_#03255b,_#e6e8ed)] mx-4 mb-1" />
 
       <div className="flex flex-wrap gap-1 p-2 items-center justify-center ">
-        {industries.map((industry, index) => (
+        {capabilities.map((capability, index) => (
           <div
             key={index}
             onClick={() =>
               navigate(
-                `/all_industries/${industry.title
+                `/all_capabilities/${capability.title
                   .toLowerCase()
                   .replace(/ & | /g, "-")}`
               )
             }
             // navigate on click
             className="setwidth w-full relative group h-[300px] bg-white border p-5 rounded-md shadow hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer hover:bg-black hover:text-white"
-            onMouseEnter={() => setHovered(industry.title)}
+            onMouseEnter={() => setHovered(capability.title)}
             onMouseLeave={() => setHovered(null)}
           >
             {/* Background Images */}
             <img
-              src={industry.image}
-              alt={industry.title}
+              src={capability.image}
+              alt={capability.title}
               className="absolute w-full h-full object-cover opacity-10 group-hover:opacity-80 transition-opacity duration-300 pointer-events-none"
             />
             <img
-              src={industry.image2}
-              alt={industry.title}
+              src={capability.image2}
+              alt={capability.title}
               className="absolute w-full h-full object-cover opacity-100 group-hover:opacity-80 transition-opacity duration-300 pointer-events-none"
             />
 
             <div
               className={`absolute bottom-3 right- p-1 rounded-full  ${
-                hovered === industry.title
+                hovered === capability.title
                   ? "border border-white bg-black"
                   : ""
               }`}
             >
-              {hovered === industry.title ? (
+              {hovered === capability.title ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6 text-white"
@@ -141,9 +170,9 @@ const Explore_industries = () => {
 
             {/* Card Content */}
             <div className="relative z-10">
-              <h3 className="text-lg font-semibold mb-2">{industry.title}</h3>
+              <h3 className="text-lg font-semibold mb-2">{capability.title}</h3>
               <ul className="text-sm space-y-1">
-                {industry.points.map((point, idx) => (
+                {capability.points.map((point, idx) => (
                   <li key={idx}>» {point}</li>
                 ))}
               </ul>
@@ -155,4 +184,4 @@ const Explore_industries = () => {
   );
 };
 
-export default Explore_industries;
+export default ExploreCapabilities;
