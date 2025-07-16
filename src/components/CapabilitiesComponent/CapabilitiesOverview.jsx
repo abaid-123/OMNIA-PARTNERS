@@ -52,11 +52,11 @@ const CapabilitiesOverview = ({
         </div>
 
         {/* Right Image Section */}
-        <div className="w-[20%] ex_a_img">
+        <div className="w-[25%] ex_a_img">
           <img
             src={expoimage}
             alt={name}
-            className="w-full h-full object-cover "
+            className="w-full h-[321px] sm:h-[451px] lg:h-full object-cover "
           />
         </div>
       </div>

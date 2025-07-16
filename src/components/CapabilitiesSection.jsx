@@ -74,14 +74,16 @@ const CapabilitiesSection = () => {
           {/* Header */}
           <div className="mb-4 ">
             <div className="flex pl-6">
-              <h2 className="text-xl md:text-4xl font-semibold mr-3">Our</h2>
+              <h2 className="text-3xl md:text-4xl font-semibold mr-3">Our</h2>
               <p className="capability_hidden text-sm text-gray-300 mt-2">
                 Lorem Ipsum is simply dummy text <br /> of the printing and
                 typesetting industry.
               </p>
             </div>
             <hr className="capability_hidden h-1 w-full border-none bg-[radial-gradient(ellipse_at_center,_#6c86d9,_#00162a)] mt-1 mb-1" />
-            <h2 className="text-xl md:text-xl font-semibold pl-6">Capabilities</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold pl-6">
+              Capabilities
+            </h2>
           </div>
 
           <div className="capabilities_show hidden   px-[5%]">

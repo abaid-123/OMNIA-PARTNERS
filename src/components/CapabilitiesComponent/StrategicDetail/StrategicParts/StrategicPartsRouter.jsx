@@ -6,7 +6,7 @@ import RiskManagement from "./RiskManagement";
 import ChangeTransformationManagement from "./ChangeTransformationManagement";
 
 const data = {
-  "strategy-development": {
+  "strategic-development": {
     title: "Strategic Development",
     backgroundImage: "/images/capabilitiesImage/StrategicHerosection.jpg",
     imgexpo: "/images/capabilitiesImage/Overview.png",
@@ -18,14 +18,15 @@ const data = {
     ],
     capability: "Strategic Services",
     backgroundImage2: "/images/capabilitiesImage/HelpedClient.jpg",
-    backgroundImage3: "/images/capabilitiesImage/Space.png",
+    backgroundImage3: "/images/capabilitiesImage/CapabilityApp.png",
     component: StrategicDevelopment,
   },
-  "mergers-acquisitions-valuation": {
-    name: "Mergers Acquistions",
-    imgbackgroundhero:
-      "/images/industriesimages/Automotiveimages/RevUpYourStrategy1.jpg",
-    imgexpo: "/images/industriesimages/Automotiveimages/automotive_img.jpg",
+  
+  "mergers-acquistions": {
+    title: "Mergers Acquistions & Valution",
+    backgroundImage:
+      "/images/capabilitiesImage/StrategicHerosection.jpg",
+    imgexpo: "/images/capabilitiesImage/Overview.png",
     types: [
       "Strategic Development",
       "Mergers Acquistions",
@@ -34,14 +35,14 @@ const data = {
     ],
     capability: "Strategic Services",
     backgroundImage2: "/images/capabilitiesImage/HelpedClient.jpg",
-    backgroundImage3: "/images/capabilitiesImage/HelpedClient.jpg",
+    backgroundImage3: "/images/capabilitiesImage/CapabilityApp.png",
 
     component: MergersAcquistions,
   },
   "risk-management": {
-    name: "Risk Management",
-    imgbackgroundhero: "/images/capabilitiesImage/StrategicHerosection.jpg",
-    imgexpo: "/images/industriesimages/Automotiveimages/automotive_img.jpg",
+    title: "Risk Management",
+    backgroundImage: "/images/capabilitiesImage/StrategicHerosection.jpg",
+    imgexpo: "/images/capabilitiesImage/Overview.png",
     types: [
       "Strategic Development",
       "Mergers Acquistions",
@@ -50,15 +51,15 @@ const data = {
     ],
     capability: "Strategic Services",
     backgroundImage2: "/images/capabilitiesImage/HelpedClient.jpg",
-    backgroundImage3: "/images/capabilitiesImage/Space.png",
+    backgroundImage3: "/images/capabilitiesImage/CapabilityApp.png",
 
     component: RiskManagement,
   },
   "change-transformation-management": {
-    name: "Change & Transformation Management",
-    imgbackgroundhero:
-      "/images/industriesimages/Automotiveimages/RevUpYourStrategy1.jpg",
-    imgexpo: "/images/industriesimages/Automotiveimages/automotive_img.jpg",
+    title: "Change & Transformation Management",
+    backgroundImage:
+      "/images/capabilitiesImage/StrategicHerosection.jpg",
+    imgexpo: "/images/capabilitiesImage/Overview.png",
     types: [
       "Strategic Development",
       "Mergers Acquistions",
@@ -67,7 +68,7 @@ const data = {
     ],
     capability: "Strategic Services",
     backgroundImage2: "/images/capabilitiesImage/HelpedClient.jpg",
-    backgroundImage3: "/images/capabilitiesImage/HelpedClient.jpg",
+    backgroundImage3: "/images/capabilitiesImage/CapabilityApp.png",
 
     component: ChangeTransformationManagement,
   },

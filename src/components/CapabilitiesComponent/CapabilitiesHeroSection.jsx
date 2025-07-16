@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CapabilitiesHeroSection = ({
   title = "All Capabilities", // default title
   backgroundImage = "/images/capabilitiesImage/CapabilitiesHerosection.png", // default image
 }) => {
+  const words = title.split(" ");
+  const lines = [];
+
+  for (let i = 0; i < words.length; i += 3) {
+    lines.push(words.slice(i, i + 3).join(" "));
+  }
+  const navigate = useNavigate();
   return (
     <div
       className="industries-hero"
@@ -16,8 +23,16 @@ const CapabilitiesHeroSection = ({
     >
       {/* Hero Content */}
       <div className="heroCotent z-10 max-w-6xl px-4 mx-auto pt-32 pb-16 text-left">
+        <div
+          onClick={() => navigate(-1)}
+          className="text-white text-sm mb-1 cursor-pointer inline-flex items-center"
+        >
+          <span className="text-lg mr-1">«</span> Back
+        </div>
         <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-          {title}
+          {lines.map((line, index) => (
+        <span key={index} className="block">{line}</span>
+      ))}
         </h1>
 
         <p className="mb-8 text-sm sm:text-base text-gray-200 max-w-xl">

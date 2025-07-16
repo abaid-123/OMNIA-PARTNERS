@@ -62,7 +62,10 @@ const Navbar = () => {
 
           {/* Logo & Text */}
           <div className="flex items-center justify-center flex-grow md:flex-grow-0">
-            <img className="logoicon mr-2" src={logoicon} alt="logo" />
+            <Link to="/">
+              <img className="logoicon mr-2" src={logoicon} alt="logo" />
+            </Link>
+
             <div className="navheading text-center md:text-left">
               <h3 className="nameheading">OMNIA</h3>
               <p className="paratext1 text-gray-500">PARTNERS LTD.</p>
@@ -135,8 +138,8 @@ const Navbar = () => {
             </li>
 
             <li>
-              <button
-                to="/portal"
+              <Link
+                to="/login"
                 className="inline-flex items-center text-sm font-medium cursor-pointer pad_client text-white bg-blue-600 px-2 py-2 rounded-full hover:bg-blue-700 transition"
               >
                 <svg
@@ -153,13 +156,13 @@ const Navbar = () => {
                   />
                 </svg>
                 Client Portal
-              </button>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="hidden show_portal">
           <Link
-            to="/portal"
+            to="/login"
             className="w-9  h-9 cursor-pointer rounded-full flex items-center justify-center"
           >
             <img
@@ -232,7 +235,7 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <Link to="/insight1" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link to="/featured-insights" onClick={() => setIsMobileMenuOpen(false)}>
                 Featured Insights
               </Link>
             </li>
@@ -242,7 +245,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/portal" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>
                 Client Portal
               </Link>
             </li>
