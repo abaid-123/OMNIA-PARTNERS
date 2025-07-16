@@ -17,7 +17,9 @@ const Industries_herosection = ({
       {/* Hero Content */}
       <div className="heroCotent z-10 max-w-6xl px-4 mx-auto pt-32 pb-16 text-left">
         <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-          {title}
+          {title.split('\n').map((line, index) => (
+        <span key={index} className="block">{line}</span>
+      ))}
         </h1>
 
         <p className="mb-8 text-sm sm:text-base text-gray-200 max-w-xl">

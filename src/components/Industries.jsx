@@ -4,6 +4,7 @@ import {
   ChevronRightIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
+import { Link } from "react-router-dom";
 
 const industriesData = [
   {
@@ -80,7 +81,7 @@ const Industries = () => {
         <div className="md:flex items-center justify-end gap-2 mb-6 px-4 header-Carousel">
           {/* Left Arrow */}
           <ChevronLeftIcon
-            className="w-5 h-5 text-gray-600 cursor-pointer"
+            className="w-6 h-6 text-gray-600 cursor-pointer"
             onClick={scrollLeft}
           />
 
@@ -101,12 +102,12 @@ const Industries = () => {
 
           {/* Right Arrow */}
           <ChevronRightIcon
-            className="w-5 h-5 text-gray-600 cursor-pointer"
+            className="w-6 h-6 text-gray-600 cursor-pointer"
             onClick={scrollRight}
           />
 
           {/* Search Icon */}
-          <MagnifyingGlassIcon className="w-5 h-5 text-gray-600 cursor-pointer ml-2" />
+          <MagnifyingGlassIcon className="w-6 h-6 text-gray-600 cursor-pointer ml-2" />
         </div>
       </div>
 
@@ -124,13 +125,13 @@ const Industries = () => {
             <img
               src={industriesData[0].image}
               alt="Automotive"
-              className="w-full h-[300px] md:h-[300px] object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
+              className="w-full h-[350px] md:h-[350px] object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
             />
             <h1 className="absolute top-4 px-3 right-0 text-white text-3xl font-bold z-10">
               01
             </h1>
 
-            <div className="absolute w-full   flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm text-white text-sm font-medium">
+            <div className="absolute w-full bottom-0  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-sm font-medium z-10">
               <p>Automotive</p>
               {hovered === "Automotive" ? (
                 // Down Arrow
@@ -151,7 +152,7 @@ const Industries = () => {
               ) : (
                 // Right Arrow
                 <svg
-                  className="w-5 h-5"
+                  className="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -179,34 +180,34 @@ const Industries = () => {
               <img
                 src={industriesData[1].image}
                 alt="Aerospace & Defense"
-                className="w-full h-[300px]  object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
+                className="w-full h-[350px] md:h-[350px]  object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
               />
               <h1 className="absolute top-4  px-3 right-0 text-white text-3xl font-bold z-10">
                 02
               </h1>
 
-              <div className="absolute w-full  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-sm font-medium z-10">
+              <div className="absolute w-full bottom-0  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-sm font-medium z-10">
                 <p>Aerospace & Defense</p>
                 {hovered === "Aerospace" ? (
                   // Down Arrow
                   <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 transform duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M7 17L17 7M7 7h10v10"
-                  />
-                </svg>
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6 transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
                 ) : (
                   // Right Arrow
                   <svg
-                    className="w-5 h-5"
+                    className="w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -232,34 +233,34 @@ const Industries = () => {
               <img
                 src={industriesData[2].image}
                 alt="Aircraft Modification & Certification"
-                className="w-full h-[300px] md:h-[300px] object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
+                className="w-full h-[350px] md:h-[350px] object-cover border-0 transition-transform duration-500 ease-in-out hover:scale-125"
               />
               <h1 className="absolute top-4  px-3 right-0 text-white text-3xl font-bold z-10">
                 03
               </h1>
 
-              <div className="absolute w-full   flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-sm font-medium z-10">
+              <div className="absolute w-full bottom-0  flex justify-between items-center px-4 py-2 bg-black/40 backdrop-blur-sm  text-white text-sm font-medium z-10t-medium z-10">
                 <p>Aircraft & Certification</p>
                 {hovered === "Aircraft" ? (
                   // Down Arrow
                   <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 transform duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M7 17L17 7M7 7h10v10"
-                  />
-                </svg>
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6 transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
                 ) : (
                   // Right Arrow
                   <svg
-                    className="w-5 h-5"
+                    className="w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -316,7 +317,7 @@ const Industries = () => {
               ) : (
                 // Right Arrow
                 <svg
-                  className="w-5 h-5"
+                  className="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -369,7 +370,7 @@ const Industries = () => {
               ) : (
                 // Right Arrow
                 <svg
-                  className="w-5 h-5"
+                  className="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -390,10 +391,13 @@ const Industries = () => {
 
       {/* Explore Industries Button */}
       <div className="mt-8 text-center">
-        <button className="bg-blue-600 text-white px-2 md:px-6 py-2  rounded-full hover:bg-blue-700 transition flex items-center gap-2 cursor-pointer mx-auto">
+        <Link
+          to="/all_industries"
+          className="inline-flex items-center justify-center bg-blue-600 text-white px-4 md:px-6 py-2 rounded-full hover:bg-blue-700 transition gap-2"
+        >
           <span>Explore Industries</span>
           <ChevronRightIcon className="w-4 h-4" />
-        </button>
+        </Link>
       </div>
     </div>
   );

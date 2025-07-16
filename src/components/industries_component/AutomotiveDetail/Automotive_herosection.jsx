@@ -5,6 +5,12 @@ const Industries_herosection = ({
   title = "Automotive", // default title
   backgroundImage = "/images/industriesimages/Automotiveimages/automotive_img.jpg", // default image
 }) => {
+   const words = title.split(" ");
+  const lines = [];
+
+  for (let i = 0; i < words.length; i += 3) {
+    lines.push(words.slice(i, i + 3).join(" "));
+  }
   const navigate = useNavigate();
 
   return (
@@ -27,7 +33,9 @@ const Industries_herosection = ({
 
         {/* Dynamic Heading */}
         <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-          {title}
+          {lines.map((line, index) => (
+        <span key={index} className="block">{line}</span>
+      ))}
         </h1>
 
         <p className="mb-8 text-sm sm:text-base text-gray-200 max-w-xl">

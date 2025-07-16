@@ -24,7 +24,7 @@ const Trending = () => {
     <section className="  w-full bg-gray-50 p-[5%] ">
       <div className="max-w-screen-xl mx-auto">
         {/* Heading Section */}
-        <div className="trending-heading flex items-center justify-between  items-start  mb-8">
+        <div className="trending-heading flex  justify-between  items-start  mb-8">
           <div className="pl-5">
             <p className="text-base text-gray-500">Featured Insights: 02</p>
             <h2 className="text-2xl font-semibold mt-1 md:text-4xl">
@@ -240,7 +240,7 @@ const Trending = () => {
                   ) : (
                     // Right Arrow
                     <svg
-                      className="w-5 h-5"
+                      className="w-6 h-6"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"

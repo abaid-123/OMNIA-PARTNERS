@@ -4,14 +4,24 @@ import { useNavigate } from "react-router-dom";
 const CapabilityInsights = ({ name, types = [], capability }) => {
   const [hovered, setHovered] = useState(null);
   const navigate = useNavigate();
+
   const capabilities = types.map((title, i) => ({
     id: i + 1,
     title,
     paragraph:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore atque exercitationem nobis",
-    image: "/images/blackimg.png", // Replace with real background if needed
-    image2: "/images/circleimg.png", // Replace with real overlay image if needed
+    image: "/images/blackimg.png",
+    image2: "/images/circleimg.png",
   }));
+
+  const getSlug = (text) =>
+    text
+      .toLowerCase()
+      .trim()
+      .replace(/\s*&\s*/g, "-")
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "");
+
   return (
     <div className="p-8">
       <h2 className="text-2xl md:text-3xl pl-3 font-bold mb-6">
@@ -25,12 +35,9 @@ const CapabilityInsights = ({ name, types = [], capability }) => {
             key={capabilityData.id}
             onClick={() =>
               navigate(
-                `/all_capabilities/${capability}/${capabilityData.title
-                  .toLowerCase()
-                  .trim()
-                  .replace(/\s*&\s*/g, "-")
-                  .replace(/\s+/g, "-")
-                  .replace(/[^a-z0-9-]/g, "")}`
+                `/all_capabilities/${getSlug(capability)}/${getSlug(
+                  capabilityData.title
+                )}`
               )
             }
             onMouseEnter={() => setHovered(capabilityData.title)}
@@ -49,12 +56,11 @@ const CapabilityInsights = ({ name, types = [], capability }) => {
             />
 
             <div
-              className={`absolute bottom-3 right-4 p-1 rounded-full 
-    ${
-      hovered === capabilityData.title
-        ? "border border-white bg-black"
-        : " "
-    }`}
+              className={`absolute bottom-3 right-4 p-1 rounded-full ${
+                hovered === capabilityData.title
+                  ? "border border-white bg-black"
+                  : ""
+              }`}
             >
               {hovered === capabilityData.title ? (
                 <svg

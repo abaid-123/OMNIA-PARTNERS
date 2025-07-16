@@ -25,7 +25,8 @@ const HelpCapabilities = ( {backgroundImage2}) => {
         </p>
       </div>
       <div className="mt-3">
-        <img src={backgroundImage2} alt="" />
+        <img src={backgroundImage2} alt=""
+        className='w-full h-[400px] sm:h-[321px] lg:h-[500px]' />
       </div>
     </div>
   )
