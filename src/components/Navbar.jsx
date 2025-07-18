@@ -61,7 +61,20 @@ const Navbar = () => {
           </div>
 
           {/* Logo & Text */}
-          <div className="flex items-center justify-center flex-grow md:flex-grow-0">
+          <div className="flex items-center  justify-center flex-grow md:flex-grow-0">
+            <svg
+                  className="w-6 h-6 mr-1 cursor-pointer hidden md:block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
             <Link to="/">
               <img className="logoicon mr-2" src={logoicon} alt="logo" />
             </Link>
@@ -123,7 +136,7 @@ const Navbar = () => {
               >
                 Featured Insights {isInsightsOpen ? "▴" : "▾"}
               </div>
-
+              
               {isInsightsOpen && (
                 <div className="w-full  bg-[#f7f7f7] shadow-lg z-50  absolute left-0 top-[100%]">
                   <Feature_insights_dropdown />
@@ -220,7 +233,7 @@ const Navbar = () => {
                 </div>
               )}
             </li>
-            <li className="relative  ">
+            <li className="relative">
               <div
                 onClick={() => setIsCapabilitiesOpen(!isCapabilitiesOpen)}
                 className="cursor-pointer text-gray-700 hover:text-blue-600"
@@ -235,7 +248,10 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <Link to="/featured-insights" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link
+                to="/insights"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Featured Insights
               </Link>
             </li>

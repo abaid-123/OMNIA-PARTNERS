@@ -3,48 +3,47 @@ import { FiShare2, FiBookmark, FiHeart } from "react-icons/fi";
 import { FaRegCommentDots } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-
 const blogData = [
   {
     id: 1,
-    title: "Unleashing The Power Of Technology",
+    title: "Strategic Services",
 
-    image: "/images/Insights/Blogs/OmniaBlog3.png",
+    image: "/images/Insights/CaseStudies/Case2.png",
     sidebarimage: "/images/Insights/Blogs/Sidebar5.png",
   },
   {
     id: 2,
-    title: "Unleashing The Power Of Technology",
+    title: "Strategic Services",
 
-    image: "/images/Insights/Blogs/OmniaBlog4.png",
+    image: "/images/Insights/CaseStudies/Case1.png",
     sidebarimage: "/images/Insights/Blogs/Sidebar6.png",
   },
   {
     id: 3,
-    title: "Unleashing The Power Of Technology",
+    title: "Strategic Services",
 
-    image: "/images/Insights/Blogs/OmniaBlog5.png",
+    image: "/images/Insights/CaseStudies/Case3.png",
     sidebarimage: "/images/Insights/Blogs/Sidebar4.png",
   },
   {
     id: 4,
-    title: "Unleashing The Power Of Technology",
+    title: "Strategic Services",
 
-    image: "/images/Insights/Blogs/OmniaBlog2.png",
+    image: "/images/Insights/CaseStudies/Case5.png",
     sidebarimage: "/images/Insights/Blogs/Sidebar7.png",
   },
   {
     id: 5,
-    title: "Unleashing The Power Of Technology",
+    title: "Strategic Services",
 
-    image: "/images/Insights/Blogs/OmniaBlog1.png",
+    image: "/images/Insights/CaseStudies/Case4.png",
     sidebarimage: "/images/Insights/Blogs/Sidebar3.png",
   },
   {
     id: 6,
-    title: "Unleashing The Power Of Technology",
+    title: "Strategic Services",
 
-    image: "/images/Insights/Blogs/OmniaBlog6.png",
+    image: "/images/Insights/CaseStudies/Case6.png",
 
     sidebarimage: "/images/Insights/Blogs/Sidebar8.png",
   },
@@ -52,21 +51,21 @@ const blogData = [
     id: 7,
     title: "Sustainable Tech: A Green Revolution",
 
-    image: "/images/Insights/Blogs/OmniaBlog7.png",
+    image: "/images/Insights/CaseStudies/Case7.png",
     sidebarimage: "/images/Insights/Blogs/Sidebar1.png",
   },
   {
     id: 8,
     title: "Cybersecurity Trends in 2025",
 
-    image: "/images/Insights/Blogs/OmniaBlog8.png",
+    image: "/images/Insights/CaseStudies/Case1.png",
     sidebarimage: "/images/Insights/Blogs/Sidebar2.png",
   },
   {
     id: 9,
     title: "Edge Computing: The Next Big Thing",
 
-    image: "/images/Insights/Blogs/OmniaBlog9.png",
+    image: "/images/Insights/CaseStudies/Case1.png",
     sidebarimage: "/images/Insights/Blogs/Sidebar8.png",
   },
 ];
@@ -94,12 +93,11 @@ const SidebarGroup = ({ title, items }) => (
     ))}
   </div>
 );
-
-const CapabilitiesBlogs = () => {
-    const navigate = useNavigate();
+const IndustriesCase = () => {
+  const navigate = useNavigate();
 
   const openBlog = (blog) => {
-    navigate(`/insights/blogs/${blog.id}`, { state: blog });
+    navigate(`/insights/case-studies/${blog.id}`, { state: blog });
   };
   return (
     <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 ">
@@ -109,7 +107,6 @@ const CapabilitiesBlogs = () => {
           <div
             key={blog.id}
             onClick={() => openBlog(blog)}
-
             className="bg-white rounded-lg p-4 border-b border-gray-200 cursor-pointer"
           >
             {/* Author Info */}
@@ -121,18 +118,21 @@ const CapabilitiesBlogs = () => {
               />
               <div>
                 <div className="font-semibold">Omnia Partners LTD</div>
-                <div className="text-xs text-gray-400">
-                  29 February 2024 · 4 Mins Read
-                </div>
               </div>
             </div>
 
             {/* Content Section */}
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1">
-                <h2 className="text-lg md:text-xl font-bold mb-2">
-                  {blog.title}
-                </h2>
+                <div className="flex justify-between">
+                  <h2 className="text-lg md:text-xl font-bold mb-2">
+                    {blog.title}
+                  </h2>
+                  <div className="text-xs text-gray-400 mt-2">
+                    29 February 2024 · 4 Mins Read
+                  </div>
+                </div>
+
                 <p className="text-gray-600 text-sm">
                   "In the ever-evolving landscape of technology, innovation
                   knows no bounds. From artificial intelligence to
@@ -152,16 +152,6 @@ const CapabilitiesBlogs = () => {
 
             {/* Actions */}
             <div className="flex justify-between items-center mt-4 flex-wrap gap-2">
-              <div className="flex gap-4 text-sm text-gray-500">
-                <div className="flex items-center gap-1 hover:text-red-500 cursor-pointer">
-                  <FiHeart className="text-xl" />
-                  <span>10k</span>
-                </div>
-                <div className="flex items-center gap-1 hover:text-blue-500 cursor-pointer">
-                  <FaRegCommentDots className="text-xl" />
-                  <span>12k</span>
-                </div>
-              </div>
               <div className="flex gap-4 text-sm text-gray-500">
                 <div className="flex items-center gap-1 hover:text-green-500 cursor-pointer">
                   <FiShare2 className="text-3xl p-1 border rounded-full border-gray-400" />
@@ -258,4 +248,4 @@ const CapabilitiesBlogs = () => {
   );
 };
 
-export default CapabilitiesBlogs;
+export default IndustriesCase;

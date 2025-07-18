@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
-const BlogHeaderBar = ({ onBlogChange }) => {
-  const [value, setValue] = React.useState("omnia");
+const HeaderCase = ({ onBlogChange }) => {
+  const [value, setValue] = useState("omnia");
 
   const handleChange = (e) => {
     const selected = e.target.value;
@@ -17,9 +17,9 @@ const BlogHeaderBar = ({ onBlogChange }) => {
           onChange={handleChange}
           className="text-sm md:text-base border-b-2 border-gray-500 border-0  mb-2 outline-none bg-transparent font-medium"
         >
-          <option value="omnia">Omnia Blogs</option>
-          <option value="capabilities">Capabilities Blogs</option>
-          <option value="industries">Industries Blogs</option>
+          <option value="omnia">Omnia Case Studies </option>
+          <option value="capabilities">Capabilities Case Studies</option>
+          <option value="industries">Industries Case Studies</option>
         </select>
 
         <button className="text-gray-600 hover:text-black transition">
@@ -31,6 +31,4 @@ const BlogHeaderBar = ({ onBlogChange }) => {
   );
 };
 
-export default BlogHeaderBar;
-
-
+export default HeaderCase;

@@ -16,6 +16,10 @@ import ForgotPassword from "./components/LoginComponent/ForgotPassword ";
 import ResetPassword from "./components/LoginComponent/ResetPassword";
 import FeaturedInsightsHome from "./pages/AllInsights/FeaturedInsightshome";
 import BlogHome from "./components/InsightsComponent/Blogs/BlogHome";
+import BlogDetail from "./components/InsightsComponent/Blogs/BlogDetail"
+import CaseStudies from "./components/InsightsComponent/CaseStudy/CaseStudies";
+
+import WhitePaperHome from "./components/InsightsComponent/WhitePaper/WhitePaperHome";
 
 function App() {
   return (
@@ -38,8 +42,16 @@ function App() {
         />
         {/* Insights */}
 
-        <Route path="/featured-insights" element={<FeaturedInsightsHome />} />
+        <Route path="insights" element={<FeaturedInsightsHome />} />
         <Route path="insights/blogs" element={<BlogHome/>}/>
+        <Route path="/insights/blogs/:id" element={<BlogDetail />} />
+        <Route path="insights/case-studies" element={<CaseStudies/>}/>
+        <Route path="/insights/case-studies/:id" element={<BlogDetail />} />
+        <Route path="insights/white-paper" element={<WhitePaperHome/>}/>
+
+
+        
+
         {/* about page */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactHome />} />

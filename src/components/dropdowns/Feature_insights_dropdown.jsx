@@ -7,7 +7,7 @@ const Feature_insights_dropdown = ({ onClose }) => {
 
   const handleNavigate = () => {
     if (onClose) onClose(); // Close dropdown if function is passed
-    navigate("/featured-insights"); // Navigate to insights page
+    navigate("/insights"); // Navigate to insights page
   };
 
   return (
