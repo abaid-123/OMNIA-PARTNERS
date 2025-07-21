@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logoicon from "../../assets/logoicon.png";
 import "../stylecomponents/Navbar.css";
-import Industry_dropdown from "../dropdowns/Industry_dropdown";
-import Capabilities_dropdown from "../dropdowns/Capabilities_dropdown";
-import Feature_insights_dropdown from "../dropdowns/Feature_insights_dropdown";
+import IndustryDropdown from "../dropdowns/IndustryDropdown";
+import CapabilitiesDropdown from "../dropdowns/CapabilitiesDropdown";
+import FeatureInsightsDropdown from "../dropdowns/FeatureInsightsDropdown";
 
 const LoginNavbar = () => {
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
@@ -59,7 +59,7 @@ const LoginNavbar = () => {
             </div>
             {isIndustriesOpen && (
               <div className="w-full bg-[#f7f7f7] shadow-lg z-50 absolute left-0 top-[100%]">
-                <Industry_dropdown />
+                <IndustryDropdown />
               </div>
             )}
           </li>
@@ -70,7 +70,7 @@ const LoginNavbar = () => {
             </div>
             {isCapabilitiesOpen && (
               <div className="w-full bg-[#f7f7f7] shadow-lg z-50 absolute left-0 top-[100%]">
-                <Capabilities_dropdown />
+                <CapabilitiesDropdown />
               </div>
             )}
           </li>
@@ -81,7 +81,7 @@ const LoginNavbar = () => {
             </div>
             {isInsightsOpen && (
               <div className="w-full bg-[#f7f7f7] shadow-lg z-50 absolute left-0 top-[100%]">
-                <Feature_insights_dropdown />
+                <FeatureInsightsDropdown />
               </div>
             )}
           </li>
@@ -113,7 +113,7 @@ const LoginNavbar = () => {
               </div>
               {isIndustriesOpen && (
                 <div className="bg-[#f7f7f7] shadow-lg z-50 absolute -right-[200%] -top-[250%]">
-                  <Industry_dropdown />
+                  <IndustryDropdown />
                 </div>
               )}
             </li>
@@ -124,13 +124,13 @@ const LoginNavbar = () => {
               </div>
               {isCapabilitiesOpen && (
                 <div className="bg-[#f7f7f7] shadow-lg z-50 absolute -right-[200%] -top-[250%]">
-                  <Capabilities_dropdown />
+                  <CapabilitiesDropdown />
                 </div>
               )}
             </li>
 
             <li>
-              <Link to="/insight1" onClick={() => setIsMobileMenuOpen(false)}>Featured Insights</Link>
+              <Link to="/insights" onClick={() => setIsMobileMenuOpen(false)}>Featured Insights</Link>
             </li>
 
             <li>

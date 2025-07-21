@@ -60,7 +60,7 @@ const industries = [
   },
 ];
 
-const Explore_industries = () => {
+const ExploreIndustries = () => {
   const [hovered, setHovered] = useState(null);
   const navigate = useNavigate();
 
@@ -155,4 +155,4 @@ const Explore_industries = () => {
   );
 };
 
-export default Explore_industries;
+export default ExploreIndustries;

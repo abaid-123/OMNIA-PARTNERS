@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiOutlineShare, HiOutlineBookmark, HiBookmark } from "react-icons/hi2";
 
-const Automotive_navbar = ({ name = "Automotive" }) => {
+const AutomotiveNavbar = ({ name = "Automotive" }) => {
   const [bookmarked, setBookmarked] = useState(false);
 
   const menuItems = [
@@ -69,4 +69,4 @@ const Automotive_navbar = ({ name = "Automotive" }) => {
   );
 };
 
-export default Automotive_navbar;
+export default AutomotiveNavbar;

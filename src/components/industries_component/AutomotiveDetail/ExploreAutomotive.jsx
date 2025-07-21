@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 
-const Explore_automotive = ({
+const ExploreAutomotive = ({
   name = "Automotive", // default name
   expoimage = "/images/industriesimages/Automotiveimages/explore_auto.png", // default image
 }) => {
@@ -64,4 +64,4 @@ const Explore_automotive = ({
   );
 };
 
-export default Explore_automotive;
+export default ExploreAutomotive;

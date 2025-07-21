@@ -1,25 +1,25 @@
 import Navbar from "../../Navbar";
 
-import Automotive_navbar from "./Automotive_navbar";
+import AutomotiveNavbar from "./AutomotiveNavbar";
 import Clienttestimonails from "../../Clienttestimonails";
 import Talkus from "../../Talkus";
 import Footer from "../../Footer";
-import Explore_automotive from "./Explore_automotive";
+import ExploreAutomotive from "./ExploreAutomotive";
 import HelpIndustries from "../HelpIndustries";
 import AutomotiveHelpClient from "./AutomotiveHelpClient";
 import AutoIndustryTeam from "./AutoIndustryTeam";
 import AutomotiveInsights from "./AutomotiveInsights";
-import Automotive_herosection from "./Automotive_herosection";
+import AutomotiveHerosection from "./AutomotiveHerosection";
 
-const Automotive_home = ({ name, backgroundImage, expoimage,types,industry }) => {
+const AutomotiveHome = ({ name, backgroundImage, expoimage,types,industry }) => {
   return (
     <div>
       <Navbar />
-      <Automotive_herosection title={name} backgroundImage={backgroundImage} />
-      <Automotive_navbar name={name} />
+      <AutomotiveHerosection title={name} backgroundImage={backgroundImage} />
+      <AutomotiveNavbar name={name} />
 
       <div id="overview">
-        <Explore_automotive />
+        <ExploreAutomotive />
       </div>
 
       <div id="how-we-can-help">
@@ -39,4 +39,4 @@ const Automotive_home = ({ name, backgroundImage, expoimage,types,industry }) =>
   );
 };
 
-export default Automotive_home;
+export default AutomotiveHome;

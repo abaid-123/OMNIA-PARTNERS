@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Hero_section from "../components/Hero_section";
+import Herosection from "../components/Herosection";
 import CapabilitiesSection from "../components/CapabilitiesSection";
 import Trending from "../components/Trending";
 import Talkus from "../components/Talkus";
@@ -13,7 +13,7 @@ const Home = () => {
     <div className="  ">
       <Navbar />
       <main>
-        <Hero_section />
+        <Herosection />
         <CapabilitiesSection />
         <Trending />
         <Industries />

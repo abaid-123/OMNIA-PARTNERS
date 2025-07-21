@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./stylecomponents/Hero_section.css";
 
-const Hero_section = () => {
+const HeroSection = () => {
   const [showCookieBanner, setShowCookieBanner] = useState(true);
 
   const bannerImages = [
@@ -179,4 +179,4 @@ const Hero_section = () => {
   );
 };
 
-export default Hero_section;
+export default HeroSection;

@@ -2,7 +2,7 @@ import React from "react";
 import "../stylecomponents/Industry_dropdown.css";
 import { useNavigate } from "react-router-dom";
 
-const Industry_dropdown = () => {
+const IndustryDropdown = () => {
    const navigate = useNavigate();
 
   const handleClick = () => {
@@ -155,4 +155,4 @@ const Industry_dropdown = () => {
   );
 };
 
-export default Industry_dropdown;
+export default IndustryDropdown;

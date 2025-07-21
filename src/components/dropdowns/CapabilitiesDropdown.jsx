@@ -2,7 +2,7 @@ import React from "react";
 import "../stylecomponents/Capabilities_dropdown.css";
 import { useNavigate } from "react-router-dom";
 
-const Capabilities_dropdown = () => {
+const CapabilitiesDropdown = () => {
    const navigate = useNavigate();
   
     const handleClick = () => {
@@ -141,4 +141,4 @@ const Capabilities_dropdown = () => {
   );
 };
 
-export default Capabilities_dropdown;
+export default CapabilitiesDropdown;

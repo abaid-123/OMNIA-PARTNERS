@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Industries_home from "./pages/all_industries/Industry_home";
-import IndustryRouter from "./pages/all_industries/IndustryRouter";
-import IndustryPartsRouter from "./pages/all_industries/IndustryPartsRouter";
+import IndustriesHome from "./pages/AllIndustries/IndustryHome";
+import IndustryRouter from "./pages/AllIndustries/IndustryRouter";
+import IndustryPartsRouter from "./pages/AllIndustries/IndustryPartsRouter";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import CapabilitiesHome from "./pages/AllCapabilities/CapabilitiesHome";
 import CapabilityRouter from "./pages/AllCapabilities/CapabilityRouter";
@@ -27,7 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* industries */}
-        <Route path="/all_industries" element={<Industries_home />} />
+        <Route path="/all_industries" element={<IndustriesHome />} />
         <Route path="/all_industries/:slug" element={<IndustryRouter />} />
         <Route
           path="/all_industries/:industry/:slug"

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Feature_insights_dropdown = ({ onClose }) => {
+const FeatureInsightsDropdown = ({ onClose }) => {
   const [hovered, setHovered] = useState(null);
   const navigate = useNavigate();
 
@@ -100,4 +100,4 @@ const Feature_insights_dropdown = ({ onClose }) => {
   );
 };
 
-export default Feature_insights_dropdown;
+export default FeatureInsightsDropdown;
