@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "../../Navbar";
 import AerospaceDefenceHeroSection from "./AerospaceDefenceHeroSection";
-import Automotive_herosection from "../AutomotiveDetail/Automotive_herosection";
-import Automotive_navbar from "../AutomotiveDetail/Automotive_navbar";
-import Explore_automotive from "../AutomotiveDetail/Explore_automotive";
+import AutomotiveHerosection from "../AutomotiveDetail/AutomotiveHerosection";
+import AutomotiveNavbar from "../AutomotiveDetail/AutomotiveNavbar";
+import ExploreAutomotive from "../AutomotiveDetail/ExploreAutomotive";
 import HelpIndustries from "../HelpIndustries";
 import AutomotiveHelpClient from "../AutomotiveDetail/AutomotiveHelpClient";
 import AutoIndustryTeam from "../AutomotiveDetail/AutoIndustryTeam";
@@ -17,10 +17,10 @@ const AerospaceDefenseHome = ({ name, backgroundImage, expoimage,types,industry 
   return (
     <div>
       <Navbar />
-      <Automotive_herosection title={name} backgroundImage={backgroundImage} />
-      <Automotive_navbar name={name} />
+      <AutomotiveHerosection title={name} backgroundImage={backgroundImage} />
+      <AutomotiveNavbar name={name} />
       <div id="overview">
-        <Explore_automotive name={name} expoimage={expoimage} />
+        <ExploreAutomotive name={name} expoimage={expoimage} />
       </div>
 
       <div id="how-we-can-help">

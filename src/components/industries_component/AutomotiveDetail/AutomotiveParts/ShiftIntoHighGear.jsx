@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "../../../Navbar";
 
-import Automotive_navbar from "../Automotive_navbar";
-import Explore_automotive from "../Explore_automotive";
-import Industries_herosection from "../Automotive_herosection";
+import AutomotiveNavbar from "../AutomotiveNavbar";
+import ExploreAutomotive from "../ExploreAutomotive";
+import Industries_herosection from "../AutomotiveHerosection";
 import HelpIndustries from "../../HelpIndustries";
 import AutomotiveHelpClient from "../AutomotiveHelpClient";
 import AutomotiveInsights from "../AutomotiveInsights";
@@ -17,10 +17,10 @@ const ShiftIntoHighGear = ({ name, image, image2, types, industry }) => {
     <div>
       <Navbar />
       <Industries_herosection title={name} backgroundImage={image} />
-      <Automotive_navbar name={name} />
+      <AutomotiveNavbar name={name} />
 
       <div id="overview">
-        <Explore_automotive name={name} expoimage={image2} />
+        <ExploreAutomotive name={name} expoimage={image2} />
       </div>
 
       <div id="how-we-can-help">

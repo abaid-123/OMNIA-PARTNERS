@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 // Import all industry detail components
-import Automotive_home from "../../components/industries_component/AutomotiveDetail/Automotive_home";
+import AutomotiveHome from "../../components/industries_component/AutomotiveDetail/AutomotiveHome";
 import AerospaceDefenseHome from "../../components/industries_component/AerospaceDefenseDetail/AerospaceDefenseHome";
 import AircraftModification_home from "../../components/industries_component/AircraftModificationDetail/AircraftModification_home";
 import Healthcare_home from "../../components/industries_component/HealthcareDetail/Healthcare_home";
@@ -62,7 +62,7 @@ const IndustryRouter = () => {
   switch (slug) {
     case "automotive":
       return (
-        <Automotive_home
+        <AutomotiveHome
           name={name}
           backgroundImage={backgroundImage}
           expoimage={expoimage}

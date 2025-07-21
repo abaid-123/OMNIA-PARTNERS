@@ -1,10 +1,18 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-const Industries_herosection = ({
-  title = "All Industries", // default title
-  backgroundImage = "/images/industriesimages/all_Indu.png", // default image
+const IndustriesHerosection = ({
+  title = "Automotive", // default title
+  backgroundImage = "/images/industriesimages/Automotiveimages/automotive_img.jpg", // default image
 }) => {
+   const words = title.split(" ");
+  const lines = [];
+
+  for (let i = 0; i < words.length; i += 3) {
+    lines.push(words.slice(i, i + 3).join(" "));
+  }
+  const navigate = useNavigate();
+
   return (
     <div
       className="industries-hero"
@@ -14,10 +22,18 @@ const Industries_herosection = ({
         backgroundPosition: "center",
       }}
     >
-      {/* Hero Content */}
       <div className="heroCotent z-10 max-w-6xl px-4 mx-auto pt-32 pb-16 text-left">
+        {/* ⏪ Back Button */}
+        <div
+          onClick={() => navigate(-1)}
+          className="text-white text-sm mb-1 cursor-pointer inline-flex items-center"
+        >
+          <span className="text-lg mr-1">«</span> Back
+        </div>
+
+        {/* Dynamic Heading */}
         <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-          {title.split('\n').map((line, index) => (
+          {lines.map((line, index) => (
         <span key={index} className="block">{line}</span>
       ))}
         </h1>
@@ -53,7 +69,7 @@ const Industries_herosection = ({
         <div className="Cookie_banner absolute bottom-12 right-36">
           <img
             src="/images/cookies_below.png"
-            alt="icon"
+            alt="cookie icon"
             className="h-[50px] object-contain"
           />
         </div>
@@ -62,4 +78,4 @@ const Industries_herosection = ({
   );
 };
 
-export default Industries_herosection;
+export default IndustriesHerosection;
