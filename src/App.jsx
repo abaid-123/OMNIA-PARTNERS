@@ -12,11 +12,11 @@ import About from "./pages/About";
 import ContactHome from "./components/AboutComponents/ContactComponent/ContactHome";
 import LoginPage from "./components/LoginComponent/LoginPage";
 import SignUpFunctionalities from "./components/LoginComponent/SignUpFunctionalities";
-import ForgotPassword from "./components/LoginComponent/ForgotPassword ";
+import ForgotPassword from "./components/LoginComponent/ForgotPassword";
 import ResetPassword from "./components/LoginComponent/ResetPassword";
-import FeaturedInsightsHome from "./pages/AllInsights/FeaturedInsightshome";
+import FeaturedInsightsHome from "./pages/AllInsights/FeaturedInsightsHome";
 import BlogHome from "./components/InsightsComponent/Blogs/BlogHome";
-import BlogDetail from "./components/InsightsComponent/Blogs/BlogDetail"
+import BlogDetail from "./components/InsightsComponent/Blogs/BlogDetail";
 import CaseStudies from "./components/InsightsComponent/CaseStudy/CaseStudies";
 
 import WhitePaperHome from "./components/InsightsComponent/WhitePaper/WhitePaperHome";
